@@ -24,7 +24,7 @@ namespace PageParamBug
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddRazorPages();
+            //services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,7 +53,7 @@ namespace PageParamBug
                 endpoints.MapControllerRoute("test", "home/foo/{page:int}", new {controller = "Home", action = "Foo"});
                 endpoints.MapControllerRoute("test2", "home/bar/{currentPage:int}",
                     new {controller = "Home", action = "Bar"});
-                endpoints.MapRazorPages();
+                //endpoints.MapRazorPages();
             });
         }
     }
